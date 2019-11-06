@@ -11,7 +11,6 @@ matrix = array((
 
 removal_collumns = []
 required_rows = []
-pairs = ()
 
 for row in range(0, matrix.shape[0]):
 	for col in range(0, matrix.shape[1]):
@@ -19,7 +18,6 @@ for row in range(0, matrix.shape[0]):
 			if col not in removal_collumns:
 				removal_collumns.append(col)
 				required_rows.append(row)
-				pairs += ((row, col))
 				break
 
 matrix_2 = delete(matrix, removal_collumns, axis=1)
